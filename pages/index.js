@@ -16,45 +16,95 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
-      <Head title="Home" />
+    <div class="middle">
+      <Head title="Zool Tech Solutions Pvt Ltd." />
       <Nav />
 
       <div className="hero">
-        <h1 className="title">Welcome to Zool!</h1>
-        <p className="description">
-          To get started, edit the <code>pages/index.js</code> or{" "}
-          <code>pages/api/date.js</code> files, then save to reload.
-        </p>
+        <div className="banner">
+          <h1 className="title">Bridge the gap between design & technology</h1>
+          <p className="description">
+            User Experience. User Interface Design & Development.
+          </p>
+        </div>
 
-        <p className="row date">
-          The date is:&nbsp;{" "}
-          {date ? (
-            <span>
-              <b>{date.date}</b>
-            </span>
-          ) : (
-            <span className="loading"></span>
-          )}
-        </p>
+        <div className="content">
+          <h1>
+            Product Ideation, UI Engineering, UX Design and Development company.
+          </h1>
+
+          <p>
+            This makes us truly a one-of-a-kind company offering solutions; for
+            startups to global enterprises helping companies innovate on their
+            web products & ideas. Working as an extended product team we quickly
+            prototype and validate your ideas. A good deal of effort is invested
+            in researching, information processing, knowledge application,
+            problem solving and approach validations which help you make better
+            decisions in your approach to product design and strategy. Zool is a
+            Product Ideation, UI Engineering, UX Design & Development company
+            based in Bangalore. Working with startups to enterprises to innovate
+            on their web & mobile product ideas. Focus on Javascript Full Stack,
+            for building high-fidelity, performance oriented solutions using
+            cloud architectures, great visual designs & applied UX principles.
+          </p>
+        </div>
 
         <div className="row">
           <Link href="https://github.com/zeit/next.js#setup">
             <a className="card">
-              <h3>Getting Started &rarr;</h3>
-              <p>Learn more about Next.js on GitHub and in their examples.</p>
-            </a>
-          </Link>
-          <Link href="https://github.com/zeit/next.js/tree/master/examples">
-            <a className="card">
-              <h3>Examples &rarr;</h3>
-              <p>Find other example boilerplates on the Next.js GitHub.</p>
+              <h3>Zool Labs </h3>
+              <p>
+                At Zool labs our perusal of new expertise are rooted in
+                passionate research to identify opportunities of products users
+                care about.
+              </p>
             </a>
           </Link>
           <Link href="https://github.com/zeit/next.js">
             <a className="card">
-              <h3>Create Next App &rarr;</h3>
-              <p>Was this tool helpful? Let us know how we can improve it!</p>
+              <h3>Ecom & Portals </h3>
+              <p>
+                We’re inventive and ambitious, from lean start-ups to the
+                biggest businesses.
+              </p>
+            </a>
+          </Link>
+          <Link href="https://github.com/zeit/next.js/tree/master/examples">
+            <a className="card">
+              <h3>Web Products </h3>
+              <p>
+                The true future of web products is in continuosly innovating the
+                products for the future.
+              </p>
+            </a>
+          </Link>
+        </div>
+        <div className="row">
+          <Link href="https://github.com/zeit/next.js">
+            <a className="card">
+              <h3>Cloud Solutions </h3>
+              <p>
+                We work with distributed computing, infrastructure and platform
+                as a services players to orchestrate and build cloud solutions.
+              </p>
+            </a>
+          </Link>
+          <Link href="https://github.com/zeit/next.js">
+            <a className="card">
+              <h3>Mobile Apps </h3>
+              <p>
+                Complimentary access to your data on mobile apps is at the heart
+                of success in the new mobile world.
+              </p>
+            </a>
+          </Link>
+          <Link href="https://github.com/zeit/next.js">
+            <a className="card">
+              <h3>Design </h3>
+              <p>
+                A great design philosophy is at the core of everything we build.
+                We imbibe great User Interface with a great User Experience.
+              </p>
             </a>
           </Link>
         </div>
@@ -62,23 +112,44 @@ const Home = () => {
 
       <style jsx>{`
         .hero {
-          width: 100%;
+          max-width: 80%;
           color: #333;
+          margin:auto auto;
         }
+        .banner{
+          min-height: 500px;
+          padding: 0px 20px;
+
+          background-image: url(static/design-banner.png);
+          background-repeat: no-repeat;
+          background-position: right;
+        }
+
+        .content{
+          padding:0px 20px;
+          margin-bottom:40px;
+        }
+
+        .content p{
+          line-height:24px;
+        }
+
         .title {
           margin: 0;
           width: 100%;
           padding-top: 80px;
           line-height: 1.15;
-          font-size: 48px;
+          font-size: 72px;
+          font-family: "Roboto Condensed";
+          text-align: left;
+          width: 500px;
         }
-        .title,
         .description {
-          text-align: center;
+          font-size:24px;
+          width: 500px;
         }
         .row {
-          max-width: 880px;
-          margin: 80px auto 40px;
+          margin: 0px auto 0px;
           display: flex;
           flex-direction: row;
           justify-content: space-around;
@@ -115,24 +186,26 @@ const Home = () => {
         }
         .card {
           padding: 18px 18px 24px;
-          width: 220px;
+          width: 33%;
           text-align: left;
           text-decoration: none;
           color: #434343;
-          border: 1px solid #9b9b9b;
+          border: 0px solid #9b9b9b;
+          font-family: "Roboto";
         }
         .card:hover {
           border-color: #067df7;
         }
         .card h3 {
           margin: 0;
-          color: #067df7;
-          font-size: 18px;
+          color: #000;
+          font-size: 28px;
+          font-family: "Roboto Condensed";
         }
         .card p {
           margin: 0;
           padding: 12px 0 0;
-          font-size: 13px;
+          font-size: 18px;
           color: #333;
         }
       `}</style>
